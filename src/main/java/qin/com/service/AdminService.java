@@ -34,4 +34,6 @@ public interface AdminService {
 
     boolean checkPhoneAndPass(String phone,String pass);
 
+    int deleteByList(String[] ids);  //批量删除数据，要删除数据存放在一个字符数组中
+
 }

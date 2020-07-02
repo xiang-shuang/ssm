@@ -94,4 +94,10 @@ public class AdminServiceImpl implements AdminService {
             return false;
         }
     }
+
+    @Override
+    public int deleteByList(String[] ids) {  //注意方法参数是字符串的数组
+        return adminMapper.deleteByList(ids);
+
+    }
 }

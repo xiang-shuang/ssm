@@ -28,4 +28,6 @@ public interface AdminMapper {
 
     int checkPass(@Param("pass") String pass);  //密码进行查询
 
+    int deleteByList(@Param("deleteIds") String[] deleteIds); //批量删除数据，要删除数据存放在一个字符数组中
+
 }
