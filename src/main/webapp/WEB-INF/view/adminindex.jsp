@@ -67,43 +67,80 @@
                     if (node.id == "classselist") {
                         /*单击班级列表时把中间区域的标题设置为班级信息列表*/
                         $(".layout-panel-center .panel-title").text("班级信息列表");
+                        //动态加js文件
+                        if(typeof(initclassse) !="function"){
+                            $.getScript("../js/classse.js",function(){
+                                initclassse();
+                            })
+                        }else{
+                            initclassse();
+                        }
                     }
 
                     /*单击导航栏中的教师信息列表结点*/
                     if (node.id == "teacherlist") {
                         /*单击教师信息列表时把中间区域的标题设置为信息列表*/
                         $(".layout-panel-center .panel-title").text("教师信息列表");
+                        //动态加js文件
+                        if(typeof(initteacher) !="function"){
+                            $.getScript("../js/teacher.js",function(){
+                                initteacher();
+                            })
+                        }else{
+                            initteacher();
+                        }
                     }
 
                     /*单击导航栏中的层次信息列表结点*/
                     if (node.id == "levelslist") {
                         /*单击教材层次列表列表时把中间区域的标题设置为教材层次列表*/
                         $(".layout-panel-center .panel-title").text("教材层次列表");
+                        //动态加js文件
+                        if(typeof(initlevels) !="function"){
+                            $.getScript("../js/levels.js",function(){
+                                initlevels();
+                            })
+                        }else{
+                            initlevels();
+                        }
                     }
 
                     /*单击导航栏中的类别信息列表结点*/
                     if (node.id == "categorylist") {
                         /*单击教材类别信息列表时把中间区域的标题设置为教材类别信息列表*/
                         $(".layout-panel-center .panel-title").text("教材类别信息列表");
+                        //动态加js文件
+                        if(typeof(initcategory) !="function"){
+                            $.getScript("../js/category.js",function(){
+                                initcategory();
+                            })
+                        }else{
+                            initcategory();
+                        }
                     }
 
                     /*单击导航栏中的出版社信息列表结点*/
                     if (node.id == "publisherlist") {
                         /*单击出版社信息列表时把中间区域的标题设置为出版社信息列表*/
                         $(".layout-panel-center .panel-title").text("出版社信息列表");
+                        //动态加js文件
+                        if(typeof(initpublisher) !="function"){
+                            $.getScript("../js/publisher.js",function(){
+                                initpublisher();
+                            })
+                        }else{
+                            initpublisher();
+                        }
                     }
 
                     /*单击导航栏中的课程信息列表结点*/
                     if (node.id == "courselist") {
                         /*单击课程信息列表时把中间区域的标题设置为课程信息列表*/
                         $(".layout-panel-center .panel-title").text("课程信息列表");
+                        
                     }
 
-                    /*单击导航栏中的课程安排信息列表结点*/
-                    if (node.id == "kclist") {
-                        /*单击课程安排信息列表时把中间区域的标题设置为程信息列表课程安排信息列表*/
-                        $(".layout-panel-center .panel-title").text("课程安排信息列表");
-                    }
+                    
 
                     /*单击导航栏中的教材征订信息列表结点*/
                     if (node.id == "jclist") {
@@ -167,7 +204,7 @@
                 </li>
 
                 <li id="jclist">
-                    <span>课程安排信息列表</span>
+                    <span>教材征订信息列表</span>
                 </li>
             </ul>
         </li>
