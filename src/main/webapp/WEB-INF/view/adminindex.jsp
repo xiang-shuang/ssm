@@ -41,12 +41,26 @@
                     if (node.id == "departmentlist") {
                         /*单击单位列表时把中间区域的标题设置为单位信息列表*/
                         $(".layout-panel-center .panel-title").text("单位信息列表");
+                        if(typeof(initdepartment) !="function"){
+                            $.getScript("../js/department.js",function(){
+                                initdepartment();
+                            })
+                        }else{
+                            initdepartment();
+                        }
                     }
 
                     /*单击导航栏中的专业信息列表结点*/
                     if (node.id == "majorlist") {
                         /*单击专业列表时把中间区域的标题设置为管理管理*/
                         $(".layout-panel-center .panel-title").text("专业信息列表");
+                        if(typeof(initmajor) !="function"){
+                            $.getScript("../js/major.js",function(){
+                                initmajor();
+                            })
+                        }else{
+                            initmajor();
+                        }
                     }
 
                     /*单击导航栏中的班级信息列表结点*/
